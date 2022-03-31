@@ -20,7 +20,7 @@ const wecom = new Wecom({
       msgtype: "text",
       agentid:  '1000002',
       text: {
-        content: "你该休息啦",
+        content: "现在是"+ new Date() +"你该休息啦！",
       },
     },
   });
