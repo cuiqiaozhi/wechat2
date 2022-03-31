@@ -9,7 +9,7 @@ const wecom = new Wecom({
 
   const scheduleCronstyle = () => {
     //每分钟的第30秒定时执行一次:
-    schedule.scheduleJob('1 * * * * *', () => {
+    schedule.scheduleJob('* * */2 * * *', () => {
         // 发送消息
   wecom.request({
     url: "/message/send",
@@ -20,7 +20,7 @@ const wecom = new Wecom({
       msgtype: "text",
       agentid:  '1000002',
       text: {
-        content: "test",
+        content: "你该休息啦",
       },
     },
   });
